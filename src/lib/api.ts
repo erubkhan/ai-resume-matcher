@@ -10,14 +10,17 @@ export async function analyzeResume(resumeText: string) {
   return res.json();
 }
 
-export async function matchResume(resumeText: string, jobDescription: string) {
-  const res = await fetch(`${API_URL}/api/match`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ resumeText, jobDescription }),
-  });
-  return res.json();
-}
+export async function matchResume(file: File, jobDescription: string) {
+    const formData = new FormData();
+    formData.append("resume", file);
+    formData.append("jobDescription", jobDescription);
+  
+    const res = await fetch(`${API_URL}/api/match`, {
+      method: "POST",
+      body: formData,
+    });
+    return res.json();
+  }  
 
 export async function uploadResume(file: File) {
   const formData = new FormData();
