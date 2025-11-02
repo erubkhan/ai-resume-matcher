@@ -75,8 +75,8 @@ export default function DashboardPage() {
             Your AI Resume Matcher
         </h2>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          Upload your resume, paste a job description, and let AI show you how well you're fit for the role — 
-          plus personalized insights to improve your chances of getting hired.
+            Upload your resume, paste a job description, and let AI show you how well you&apos;re fit for the role.
+            Plus personalized insights to improve your chances of getting hired.
         </p>
       </motion.div>
 
@@ -168,6 +168,9 @@ export default function DashboardPage() {
             <h2 className="text-xl font-bold text-blue-400 mb-4">
               Match Result
             </h2>
+            <h3 className="text-l font-bold text-blue-200 mb-2">
+              Check how Fit you are for this Role:
+            </h3>
             <pre className="whitespace-pre-wrap bg-gray-950 border border-gray-800 rounded-xl p-5 text-gray-200 leading-relaxed overflow-y-auto max-h-[500px]">
               {matchResult}
             </pre>
@@ -177,8 +180,11 @@ export default function DashboardPage() {
         {analysisResult && (
           <div className="bg-gray-900/70 border border-gray-800 rounded-2xl p-8 shadow-lg">
             <h2 className="text-xl font-bold text-green-400 mb-4">
-              Analysis Result
+              Resume Result: 
             </h2>
+            <h3 className="text-l font-bold text-green-200 mb-2">
+              ResumeGPT suggestions on Improving Your Resume:
+            </h3>
             <pre className="whitespace-pre-wrap bg-gray-950 border border-gray-800 rounded-xl p-5 text-gray-200 leading-relaxed overflow-y-auto max-h-[500px]">
               {analysisResult}
             </pre>
