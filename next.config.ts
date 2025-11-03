@@ -1,19 +1,20 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
   eslint: {
-    // ✅ This tells Vercel and Next.js not to block the build on lint warnings
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true, // ✅ don’t block build on lint errors
   },
   webpack: (config) => {
-    // ✅ This ensures your `@/lib/...` imports resolve correctly
+    // ✅ make @ point to your project root
     config.resolve.alias = {
       ...config.resolve.alias,
-      "@": "./",
+      "@": path.resolve(__dirname),
     };
     return config;
   },
 };
 
 export default nextConfig;
+
 
