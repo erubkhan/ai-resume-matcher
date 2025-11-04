@@ -26,14 +26,7 @@
     "tailwindcss": "^4",
     "typescript": "^5"
   },
-  "compilerOptions": {
-      "baseUrl": "src",
-      "paths": {
-        "@/*": ["./*"]
-      }
-  }, 
   "engines": {
     "node": ">=20"
   }
-  
 }
