@@ -194,7 +194,7 @@ export default function DashboardPage() {
 
       {/* Footer */}
       <footer className="text-center text-gray-500 text-sm mt-16">
-        Built with ❤️ using Next.js + OpenAI | © {new Date().getFullYear()} AI Resume Matcher
+        Built with ❤️ using Next.js | © {new Date().getFullYear()} AI Resume Matcher
       </footer>
     </div>
   );
