@@ -1,4 +1,3 @@
-// src/lib/api.ts
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5050";
 
 export async function analyzeResume(resumeText: string) {
