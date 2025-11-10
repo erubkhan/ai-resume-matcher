@@ -10,7 +10,16 @@ const pdf = require("pdf-parse");
 dotenv.config();
 
 const app = express();
-app.use(cors({ origin: "http://localhost:3000" }));
+//app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({
+  origin: [
+    "http://localhost:3000", // for local dev
+    "https://ai-resume-matcher-2.vercel.app" // your Vercel site
+  ],
+  methods: ["GET", "POST"],
+  credentials: true
+}));
+
 app.use(express.json());
 
 const upload = multer({ dest: "uploads/" });
